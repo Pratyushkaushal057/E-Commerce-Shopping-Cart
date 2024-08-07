@@ -1,0 +1,53 @@
+<div class="Products">
+<!-- <p>Name: {{product.name}}</p>
+<p>Price: ${{product.price}}</p>
+<p>Color: {{product.color}}</p>
+<p>Discounted Price: ${{ getDiscountedPrice().toFixed(2) }}</p>
+<p>{{product.inStock > 0 ? 'Only ' +  product.inStock + ' items Left' : 'Not in Stock'}}</p>
+<button (click)="decreamentCartValue()">-</button>
+<span>{{ addToCart }}</span>
+<button (click)="increamentCartValue()">+</button> -->
+<!-- <button [disabled]="!(product.inStock > 0)">Buy Now</button> -->
+<!-- <input [value]="name" style="margin-left:20px;" (input)="onNameChange($event)">
+<p>name={{name}}</p> -->
+<app-search (searchTextChanged)="setSearchText($event)"></app-search>
+<!-- <div *ngFor="let item of listOfString">
+    <p>Current Element of Array is : {{item}}</p>
+</div> -->
+<product-list [searchText]="searchText" #productListComponent></product-list>
+<product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></product-detail>
+
+<div class="ekart-featured-products">
+    <div class="ekart-featured-product-heading">
+        <h3>Latest Arrivals in Popular Brands</h3>
+    </div>
+
+
+    <div class="ekart-featured-products-item">
+        <h3 class="title">New Arrivals in Nike</h3>
+        <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quae?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sunt suscipit explicabo!
+        </p>
+        <button class="call-to-action">Learn More</button>
+    </div>
+    <div class="ekart-featured-products-item">
+        <h3 class="title">New Arrivals in Adidas</h3>
+        <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quae?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sunt suscipit explicabo!
+        </p>
+        <button class="call-to-action">Learn More</button>
+    </div>
+    <div class="ekart-featured-products-item">
+        <h3 class="title">New Arrivals in Reebok</h3>
+        <p class="description">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Vel, quae?
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sunt suscipit explicabo!
+        </p>
+        <button class="call-to-action">Learn More</button>
+    </div>
+
+</div>
+</div>
+
